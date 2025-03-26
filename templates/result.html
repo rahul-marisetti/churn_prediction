@@ -4,8 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            text-align: center;
+            background: linear-gradient(to right, #cfd8dc, #90a4ae); /* Same background as index.html */
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: darkblue;
+            margin-bottom: 20px;
+        }
+        a {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        a:hover {
+            background-color: darkblue;
+        }
+    </style>
 </head>
-<body style="text-align:center; font-family: Arial, sans-serif;">
+<body>
     <h1>Churn Prediction Result</h1>
     <h2>{{ result }}</h2>
     <a href="/">Go Back</a>
