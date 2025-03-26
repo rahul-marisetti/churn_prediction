@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streaming Service Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #cfd8dc, #90a4ae);
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #218838;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST"> <!-- FIXED FORM ACTION -->
+       <center><h2>Data for Prediction</h2></center>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <label for="login">Login Frequency:</label>
+        <input type="number" id="login" name="login" required>
+
+        <label for="location">Location:</label>
+        <select id="location" name="location"> <!-- FIXED NAME ATTRIBUTE -->
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Germany">Germany</option>
+            <option value="Australia">Australia</option>
+        </select>
+
+        <label for="rating">Customer Rating:</label>
+        <input type="number" id="rating" name="rating" step="0.1" required>
+
+        <label for="subscription">Subscription Duration (months):</label>
+        <input type="number" id="subscription" name="subscription" required>
+
+        <label for="activity">Activity Time (hours):</label>
+        <input type="number" id="activity" name="activity" step="0.1" required>
+
+       <center><button type="submit">Predict</button></center>
+    </form>
+</body>
+</html>
